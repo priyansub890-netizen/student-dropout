@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Risk Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='modern.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="form-page">
+
+    <div class="form-wrapper">
+
+        <div class="form-header">
+
+            <h1>
+                <i class="fa-solid fa-chart-line"></i>
+                Student Dropout Prediction
+            </h1>
+
+            <p>
+                Fill in the student's information to predict
+                dropout risk using Machine Learning.
+            </p>
+
+        </div>
+
+        <form action="/prediction" method="POST">
+
+            <!-- Demographic Factors -->
+
+            <div class="section-card">
+
+                <h2>
+                    <i class="fa-solid fa-user"></i>
+                    Demographic Factors
+                </h2>
+
+                <div class="grid-layout">
+
+                    <div class="input-box">
+
+                        <label>Gender</label>
+
+                        <select name="sex" required>
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="1">
+                                Male
+                            </option>
+
+                            <option value="0">
+                                Female
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Age</label>
+
+                        <input type="number"
+                               name="age"
+                               placeholder="Enter Age"
+                               required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Educational Support -->
+
+            <div class="section-card">
+
+                <h2>
+                    <i class="fa-solid fa-school"></i>
+                    Educational Support
+                </h2>
+
+                <div class="grid-layout">
+
+                    <div class="input-box">
+
+                        <label>
+                            Family Educational Support
+                        </label>
+
+                        <select name="famsup" required>
+
+                            <option value="">
+                                Select Option
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>
+                            School Educational Support
+                        </label>
+
+                        <select name="schoolsup" required>
+
+                            <option value="">
+                                Select Option
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Technology Access -->
+
+            <div class="section-card">
+
+                <h2>
+                    <i class="fa-solid fa-wifi"></i>
+                    Technology Access
+                </h2>
+
+                <div class="grid-layout">
+
+                    <div class="input-box">
+
+                        <label>
+                            Internet Access At Home
+                        </label>
+
+                        <select name="internet" required>
+
+                            <option value="">
+                                Select Option
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                            <option value="0">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Academic Performance -->
+
+            <div class="section-card">
+
+                <h2>
+                    <i class="fa-solid fa-book-open"></i>
+                    Academic Performance
+                </h2>
+
+                <div class="grid-layout">
+
+                    <div class="input-box">
+
+                        <label>Study Time</label>
+
+                        <input type="number"
+                               name="study"
+                               placeholder="Enter Study Time"
+                               required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Previous Failures</label>
+
+                        <input type="number"
+                               name="failure"
+                               placeholder="Enter Failures"
+                               required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Absences</label>
+
+                        <input type="number"
+                               name="absent"
+                               placeholder="Enter Absences"
+                               required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>G1 Marks</label>
+
+                        <input type="number"
+                               name="g1"
+                               placeholder="Enter G1 Marks"
+                               required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>G2 Marks</label>
+
+                        <input type="number"
+                               name="g2"
+                               placeholder="Enter G2 Marks"
+                               required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button type="submit"
+                    class="submit-btn">
+
+                <i class="fa-solid fa-robot"></i>
+
+                Predict Dropout Risk
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
