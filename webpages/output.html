@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='modern.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="result-page">
+
+    <div class="result-card">
+
+        <div class="result-icon">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+        </div>
+
+        <h1>
+            Prediction Result
+        </h1>
+
+        <p class="result-subtitle">
+            AI Analysis Completed Successfully
+        </p>
+
+        <div class="result-box">
+
+            <h2>
+                {{ answer }}
+            </h2>
+
+        </div>
+
+        <div class="info-section">
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Prediction generated using
+                    Random Forest Algorithm.
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h3>
+                    Student Analysis
+                </h3>
+
+                <p>
+                    Based on academic and
+                    demographic factors.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="button-group">
+
+            <a href="/student-form">
+
+                <button class="secondary-btn">
+
+                    New Prediction
+
+                </button>
+
+            </a>
+
+            <a href="/">
+
+                <button class="primary-btn">
+
+                    Home Page
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
